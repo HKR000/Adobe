@@ -55,7 +55,8 @@ Environment: Docker (linux/amd64), CPU-only
 ⚡ Building the Docker Image
 
 
-docker build --platform linux/amd64 -t persona-doc-analyzer:latest .
+docker build -t pdf_outline_extractor:round1b .
+
 
 ▶️ Running the Container
 
@@ -72,11 +73,13 @@ Run:
 
 
 
-docker run --rm \
-  -v $(pwd)/input:/app/input \
-  -v $(pwd)/output:/app/output \
-  --network none \
-  persona-doc-analyzer:latest
+docker run --rm `
+  -v "${PWD}\input:/app/input" `
+  -v "${PWD}\output:/app/output" `
+  --network none `
+  pdf_outline_extractor:round1b
+  
+
 The processed JSON will be saved in output/.
 
 ✅ Features
