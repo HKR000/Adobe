@@ -40,9 +40,13 @@ Environment: Docker (linux/amd64), CPU-only
 
 
 ├── Dockerfile
+
 ├── main.py
+
 ├── requirements.txt
+
 ├── README.md  (this file)
+
 └── modules/
     ├── outline_extractor.py
     ├── persona_ranker.py
@@ -87,29 +91,4 @@ Fast execution (≤ 60s).
 
 Fully offline, CPU-only, model size ≤ 1GB.
 
-📊 Example Output
 
-
-{
-  "metadata": {
-    "documents": ["report1.pdf", "report2.pdf"],
-    "persona": "Investment Analyst",
-    "job_to_be_done": "Analyze revenue trends and R&D investments",
-    "timestamp": "2025-07-28T10:00:00Z"
-  },
-  "extracted_sections": [
-    {
-      "document": "report1.pdf",
-      "page": 12,
-      "section_title": "Revenue Growth",
-      "importance_rank": 1
-    }
-  ],
-  "subsection_analysis": [
-    {
-      "document": "report1.pdf",
-      "page": 12,
-      "refined_text": "In 2024, revenue increased by 20% due to product diversification..."
-    }
-  ]
-}
